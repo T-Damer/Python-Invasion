@@ -10,7 +10,7 @@ import game_functions as gf
 def run_game():
     pygame.init()
 
-    ai_settings = Settings()  # Very cool trick, you store all setting in one variable!
+    ai_settings = Settings()
 
     pygame.display.set_caption("Alien Invasion")
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
@@ -24,8 +24,14 @@ def run_game():
     while True:
         gf.check_events(ai_settings, screen, ship, bullets)
         ship.update()
-        gf.update_bullets(bullets)
+        bullets.update()
         gf.update_screen(ai_settings, screen, ship, alien, bullets)
+
+        # Deleting bullets outta screen
+        for bullet in bullets.copy():
+            if bullet.rect.bottom <= 0:
+                bullets.remove(bullet)
+
 
 
 run_game()

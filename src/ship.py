@@ -8,7 +8,7 @@ class Ship:
         self.moving_left = False  # Moving flag
         self.screen = screen
         self.ai_settings = ai_settings
-        self.image = pygame.image.load("../res/images/ship.bmp").convert_alpha()
+        self.image = pygame.image.load("../res/images/ship.bmp")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         # Every new ship begins from the bottom of the screen

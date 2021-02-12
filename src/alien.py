@@ -5,7 +5,7 @@ class Alien:
 
     def __init__(self, screen):
         self.screen = screen
-        self.image = pygame.image.load("../res/images/alien.bmp").convert_alpha()
+        self.image = pygame.image.load("../res/images/alien.bmp")
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         # Every new ship begins from the bottom of the screen

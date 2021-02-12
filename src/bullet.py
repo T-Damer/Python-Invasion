@@ -13,7 +13,7 @@ class Bullet(Sprite):
                                 ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
-        self.bullet_speed_factor = 0.2
+        self.bullet_speed_factor = 1
 
         # Storing bullet position
         self.y = float(self.rect.y)
