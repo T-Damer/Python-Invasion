@@ -13,14 +13,14 @@ class Bullet(Sprite):
                                 ai_settings.bullet_height)
         self.rect.centerx = ship.rect.centerx
         self.rect.top = ship.rect.top
-        self.bullet_speed_factor = 1
+        self.bullet_speed_factor = 3
 
         # Storing bullet position
         self.y = float(self.rect.y)
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
 
-    def update(self):
+    def update(self, ai_settings):
         """ Moves bullet to on the screen """
         self.y -= self.bullet_speed_factor
         self.rect.y = self.y

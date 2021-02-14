@@ -1,17 +1,23 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Alien:
+class Alien(Sprite):
 
-    def __init__(self, screen):
+    def __init__(self, ai_settings, screen):
+        super().__init__()
+        self.ai_settings = ai_settings
         self.screen = screen
+
         self.image = pygame.image.load("../res/images/alien.bmp")
         self.rect = self.image.get_rect()
-        self.screen_rect = screen.get_rect()
-        # Every new ship begins from the bottom of the screen
-        self.rect.centerx = self.screen_rect.centerx
-        self.rect.top = self.screen_rect.top
+
+        self.rect.x = self.rect.width
+        self.rect.y = self.rect.height
+
+        # Saving position of an alien
+        self.x = float(self.rect.x)
 
     def blitme(self):
-        """ Draws ship in current position"""
+        """ Draws alien in current position"""
         self.screen.blit(self.image, self.rect)
