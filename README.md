@@ -14,6 +14,10 @@ A simple clone of Alien Invasion on atari, created using pyGame library.
 4. Packages already installed in `venv library root`, I used `pip install pygame`.
 5. Run `run_game.py` using `py run_game.py` or `python3 run_game.py` (remember to cd.. to this folder)
 
+# Cheats and configuring
+
+If you want to change some setting, please look in `src/settings.py`
+
 ---
 
 <a href="https://www.buymeacoffee.com/tdamer"><img src="https://img.buymeacoffee.com/button-api/?text=Support me with a coffee&emoji=☕️&slug=tdamer&button_colour=ffcc33&font_colour=000&font_family=Lato&outline_colour=000&coffee_colour=000"></a>
